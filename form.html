@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #46a5ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #96c0e1;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .container input[type="text"],
+        .container input[type="email"],
+        .container input[type="password"],
+        .container select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .container button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #42c847;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .container button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register for courses !</h1>
+        <form action="form.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+
+            <label>Studying In:</label>
+            <input type="radio" value="section a" name="section" id="sectionida">
+            <label for="sectionida">Class 12</label>
+            <input type="radio" value="section b" name="section" id="sectionidb">
+            <label for="sectionidb">Dropper</label>
+            <input type="radio" value="section c" name="section" id="sectionidc">
+            <label for="sectionidc">Undergrad</label>
+
+            <h4>Do you want hard copies of the book?</h4>
+            <input type="checkbox" name="yesorno" id="books" class="red">
+            <label for="books">YES</label>
+            <input type="checkbox" name="yesorno" id="books" class="red">
+            <label for="books">NO</label>
+
+            <h4>Select the duration of the course:</h4>
+            <select name="days" id="time">
+                <option value="">6 months</option>
+                <option value="">1 year</option>
+                <option value="">2 years</option>
+                <option value="">lifetime access</option>
+            </select>
+
+            <label for="joining">Month of Joining:</label>
+            <input type="date" id="joining">
+
+            <label for="photo">Submit Your Passport Size Photograph:</label>
+            <input type="file" id="photo">
+
+            <label for="aadhar">Submit Your Aadhar Card Picture (PDF form):</label>
+            <input type="file" id="aadhar">
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

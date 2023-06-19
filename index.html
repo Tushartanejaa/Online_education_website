@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Document</title>
+      
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          height: 100vh;
+          background-image: url("/images/background.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+  
+        form {
+          max-width: 300px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #f7eded;
+        }
+  
+        input[type="text"],
+        input[type="password"],
+        button {
+          display: block;
+          margin-bottom: 10px;
+          padding: 8px;
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+  
+        button {
+          background-color: #4caf50;
+          color: white;
+          cursor: pointer;
+        }
+  
+        button:hover {
+          background-color: #45a049;
+        }
+  
+        .back {
+          max-width: 300px;
+          margin: 13% auto;
+          padding: 35px;
+          background: white;
+          border: 1px solid lightgray;
+          border-radius: 10px;
+        }
+  
+        h1 {
+          text-align: center;
+          color: #45a049;
+        }
+      </style>
+
+  </head>
+  <body>
+    <h1 style="color: #45a049" >Welcome to SHIKSHAk!</h1>  
+    <div class="back">
+      <input type="text" id="Username" placeholder="Username" required />
+      <input type="password" id="Password" placeholder="Password" required />
+      <span><button onclick="register()">Register</button></span>
+      <span><button onclick="login()">Login</button> </span>
+
+    
+    </div>
+
+    <script>
+      var users = {};
+
+      function register() {
+        var regUsername = document.getElementById("Username").value;
+        var regPassword = document.getElementById("Password").value;
+
+        if (users[regUsername]) {
+          console.log(
+            "Username already exists. Please choose a different username."
+          );
+        } else {
+          users[regUsername] = regPassword;
+          console.log("Registration successful!");
+          console.log(users);
+        }
+
+        document.getElementById("Username").value = "";
+        document.getElementById("Password").value = "";
+      }
+
+   
+
+      function login() {
+        var loginUsername = document.getElementById("Username").value;
+        var loginPassword = document.getElementById("Password").value;
+
+        if (users[loginUsername] && users[loginUsername] === loginPassword) {
+          console.log("Login successful!");
+          window.location.href = "/home.html";
+        } else {
+          console.log("Login failed. Please check your username and password.");
+        }
+
+        document.getElementById("Username").value = "";
+        document.getElementById("Password").value = "";
+      }
+    </script>
+
+
+ 
+  </body>
+</html>
