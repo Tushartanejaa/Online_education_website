@@ -1,0 +1,32 @@
+.form-container {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #1ce7fe;
+    border-radius: 4px;
+  }
+  
+  .form-button {
+    padding: 10px 20px;
+    background-color: #5981f9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background-color: #9bcaf9;
+  }
+  
